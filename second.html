@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+</head>
+
+<body>
+
+ <ul class="demoToolList">
+    <li>Clear the canvas: <button id="clear" type="button">Clear</button></li>
+    <li>Choose a color:
+      <button class="color" data-color="#cb3594" type="button">Purple</button>
+      <button class="color" data-color="#659b41" type="button">Green</button>
+      <button class="color" data-color="#ffcf33" type="button">Yellow</button>
+      <button class="color" data-color="#986928" type="button">Brown</button>
+    </li>
+    <li>Choose a size:
+      <button class="size" data-size="small" type="button">Small</button>
+      <button class="size" data-size="normal" type="button">Normal</button>
+      <button class="size" data-size="large" type="button">Large</button>
+      <button class="size" data-size="huge" type="button">Huge</button>
+    </li>
+    <li>
+      <span class="highlight">Choose a tool: </span>
+      <button class="tool" data-tool="crayon" type="button">Crayon</button>
+      <button class="tool" data-tool="marker" type="button">Marker</button>
+      <button class="tool" data-tool="eraser" type="button">Eraser</button>
+    </li>
+  </ul>
+
+
+</body>
+
+<script>
+const {ipcRenderer} = require('electron')
+function show() {
+  //ipcRenderer.send('clear');
+  
+}
+</script>
+
+
+</html>
