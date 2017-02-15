@@ -42,7 +42,6 @@ crayonTextureImage.src = "images/crayon-texture.png";
 $(".color").click(function () {
   var color = $(this).attr('data-color');
   curColor = color;
-  //clickColor.push(curColor);
 });
 
 
@@ -50,14 +49,12 @@ $(".color").click(function () {
 $(".size").click(function () {
   var size = $(this).attr('data-size');
   curSize = size;
-  //clickSize.push(curSize);
 });
 
 
 $(".tool").click(function () {
   var tool = $(this).attr('data-tool');
   curTool = tool;
-  //clickTool.push(curTool);
 });
 
 

@@ -57,7 +57,7 @@ app.on('activate', function () {
   }
 })
 
-ipcMain.on('show-second',(event, arg)=>{
+ipcMain.on('show-second',(event)=>{
   secondWindow.show()
 })
 
