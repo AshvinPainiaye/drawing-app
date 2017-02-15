@@ -1,3 +1,4 @@
+const {ipcRenderer} = require('electron');
 const $ = require('jquery');
 
 context = document.getElementById('canvas').getContext("2d");
@@ -22,6 +23,10 @@ var radius;
 var crayonTextureImage = new Image();
 var totalLoadResources = 8;
 var curLoadResNum = 0;
+
+function show() {
+  ipcRenderer.send('show-second');
+}
 
 /**
 * Calls the redraw function after all neccessary resources are loaded.
