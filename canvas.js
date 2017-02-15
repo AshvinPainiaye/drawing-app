@@ -50,7 +50,7 @@ ipcRenderer.on('color', (event, color) => {
 
 /*$(".color").click(function () {
   curColor = $(this).attr('data-color');
-});
+});*/
 
 $(".size").click(function () {
   curSize = $(this).attr('data-size');
@@ -58,7 +58,7 @@ $(".size").click(function () {
 
 $(".tool").click(function () {
   curTool = $(this).attr('data-tool');
-});*/
+});
 
 
 $('#canvas').mousedown(function (e) {
