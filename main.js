@@ -61,3 +61,8 @@ ipcMain.on('show-second',(event)=>{
   secondWindow.show()
 })
 
+
+ipcMain.on('color',(event, color)=>{
+    console.log(color);
+  mainWindow.webContents.send('color', color)
+})

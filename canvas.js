@@ -13,7 +13,7 @@ var colorPurple = "#cb3594";
 var colorGreen = "#659b41";
 var colorYellow = "#ffcf33";
 var colorBrown = "#986928";
-var curColor = colorPurple;
+var curColor = "#000";
 var clickColor = new Array();
 var clickSize = new Array();
 var curSize = "small";
@@ -43,8 +43,12 @@ crayonTextureImage.onload = function () {
 crayonTextureImage.src = "images/crayon-texture.png";
 
 
+ipcRenderer.on('color', (event, color) => {
+  console.log(color);
+    curColor = color;
+});
 
-$(".color").click(function () {
+/*$(".color").click(function () {
   curColor = $(this).attr('data-color');
 });
 
@@ -54,7 +58,7 @@ $(".size").click(function () {
 
 $(".tool").click(function () {
   curTool = $(this).attr('data-tool');
-});
+});*/
 
 
 $('#canvas').mousedown(function (e) {
