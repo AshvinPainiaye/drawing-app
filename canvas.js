@@ -17,7 +17,7 @@ var clickColor = new Array();
 var clickSize = new Array();
 var curSize = "small";
 var clickTool = new Array();
-var curTool = "crayon";
+var curTool = "marker";
 var radius;
 var crayonTextureImage = new Image();
 var totalLoadResources = 8;
