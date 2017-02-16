@@ -63,6 +63,13 @@ ipcMain.on('show-second',(event)=>{
 
 
 ipcMain.on('color',(event, color)=>{
-    console.log(color);
   mainWindow.webContents.send('color', color)
+})
+
+ipcMain.on('size',(event, size)=>{
+  mainWindow.webContents.send('size', size)
+})
+
+ipcMain.on('tool',(event, tool)=>{
+  mainWindow.webContents.send('tool', tool)
 })

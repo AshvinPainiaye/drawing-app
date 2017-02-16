@@ -44,20 +44,16 @@ crayonTextureImage.src = "images/crayon-texture.png";
 
 
 ipcRenderer.on('color', (event, color) => {
-  console.log(color);
     curColor = color;
 });
 
-/*$(".color").click(function () {
-  curColor = $(this).attr('data-color');
-});*/
-
-$(".size").click(function () {
-  curSize = $(this).attr('data-size');
+ipcRenderer.on('size', (event, size) => {
+    curSize = size;
 });
 
-$(".tool").click(function () {
-  curTool = $(this).attr('data-tool');
+
+ipcRenderer.on('tool', (event, tool) => {
+    curTool = tool;
 });
 
 
