@@ -24,7 +24,7 @@ mainWindow.on('closed', function(){
 })
 
 secondWindow = new BrowserWindow({
-    width:75,
+    width:500,
     height:500,
     show:false
 })
