@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
 
@@ -19,28 +19,29 @@
 
         <canvas id="canvas" class="center-block" width="490" height="220"></canvas>
 
-        <br><br>
-
-        <button class="btn btn-default center-block" onclick="show()">Outils</button>
-
+        <div class="text-center" style="margin-top:30px;">
+          <a class="btn btn-default" href="#" role="button" onclick="show()">Outils</a>
+          <a class="btn btn-default" href="#"
+            role="button" onclick="clearCanvas()">Effacer</a>
+        </div>
         <!--<ul>
         <li>Clear the canvas: <span id="clear" class="btn btn-default" onclick="clearCanvas()">Clear</span></li>
       </ul>-->
-    </div>
-  </div>
-</div>
-
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <p class="text-muted text-right">© 2017 Ashvin PAÏNIAYE</p>
       </div>
     </div>
   </div>
-</footer>
 
-<script src="canvas.js"></script>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-muted text-right">© 2017 Ashvin PAÏNIAYE</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="canvas.js"></script>
 
 </body>
 

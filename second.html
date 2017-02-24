@@ -15,26 +15,24 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div style="background-color: #fff; padding:20px;">
+        <div class="outils">
           <ul>
-            <li>Tout effacer: <button id="clear" class="btn btn-default" onclick="clearCanvas()"></button></li>
-            <li>Couleur:
+            <li>
               <span class="btn btn-default color" data-color="#cb3594" style="background-color:#cb3594;"></span>
               <span class="btn btn-default color" data-color="#659b41" style="background-color:#659b41;"></span>
               <span class="btn btn-default color" data-color="#ffcf33" style="background-color:#ffcf33;"></span>
               <span class="btn btn-default color" data-color="#986928" style="background-color:#986928;"></span>
             </li>
-            <li>Taille:
-              <span class="btn btn-default size" data-size="small">Fin</span>
-              <span class="btn btn-default size" data-size="normal">Normal</span>
-              <span class="btn btn-default size" data-size="large">Epais</span>
-              <span class="btn btn-default size" data-size="huge">Gros</span>
+            <li>
+              <span class="btn btn-default size" data-size="small"><i class="fa fa-circle" aria-hidden="true" style="font-size:10px;"></i></span>
+              <span class="btn btn-default size" data-size="normal"><i class="fa fa-circle" aria-hidden="true" style="font-size:15px;"></i></span>
+              <span class="btn btn-default size" data-size="large"><i class="fa fa-circle" aria-hidden="true" style="font-size:20px;"></i></span>
+              <span class="btn btn-default size" data-size="huge"><i class="fa fa-circle" aria-hidden="true" style="font-size:27px;"></i></span>
             </li>
             <li>
-              <span class="highlight">Outils: </span>
               <!--<span class="btn btn-default tool" data-tool="crayon">Crayon</span>-->
-              <span class="btn btn-default tool" data-tool="marker">Marker</span>
-              <span class="btn btn-default tool" data-tool="eraser">Eraser</span>
+              <span class="btn btn-default tool" data-tool="marker"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+              <span class="btn btn-default tool" data-tool="eraser"><i class="fa fa-eraser" aria-hidden="true"></i></span>
             </li>
           </ul>
         </div>

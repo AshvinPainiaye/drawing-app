@@ -13,3 +13,9 @@ ul{
 ul li{
   margin-bottom: 10px;
 }
+
+.outils{
+  background-color: #fff; 
+  padding:20px;
+  margin-top:50px;
+}
