@@ -3,37 +3,44 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Drawing App</title>
+  <title>Drawing-App</title>
   <link rel="stylesheet" href="lib/css/bootstrap.min.css">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
   <link rel="stylesheet" href="lib/css/jquery-ui.css" />
 </head>
 
 <body>
-  <style>
-    ul li {
-      margin-bottom: 10px;
-    }
-  </style>
-
-
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <canvas id="canvas" width="490" height="220" style="border:1px solid black; cursor:pointer"></canvas>
+
+        <h1 class="text-center" style="margin-bottom:40px;">DRAWING APP</h1>
+
+        <canvas id="canvas" class="center-block" width="490" height="220"></canvas>
 
         <br><br>
-        <button class="btn btn-default" onclick="show()">Outils</button>
+
+        <button class="btn btn-default center-block" onclick="show()">Outils</button>
 
         <!--<ul>
-          <li>Clear the canvas: <span id="clear" class="btn btn-default" onclick="clearCanvas()">Clear</span></li>
-        </ul>-->
+        <li>Clear the canvas: <span id="clear" class="btn btn-default" onclick="clearCanvas()">Clear</span></li>
+      </ul>-->
+    </div>
+  </div>
+</div>
 
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-muted text-right">© 2017 Ashvin PAÏNIAYE</p>
       </div>
     </div>
   </div>
+</footer>
 
-  <script src="canvas.js"></script>
+<script src="canvas.js"></script>
 
 </body>
 

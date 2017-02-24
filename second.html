@@ -3,53 +3,46 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Drawing App</title>
-    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+  <title>Drawing-App</title>
+  <link rel="stylesheet" href="lib/css/bootstrap.min.css">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <link rel="stylesheet" href="lib/css/jquery-ui.css" />
-  <style>
-  ul li{
-    margin-bottom: 10px;
-  }
-  </style>
+  <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
-
-        <ul>
-          <li>Tout effacer: <button id="clear" class="btn btn-default" onclick="clearCanvas()"></button></li>
-          <li>Couleur:
-            <span class="btn btn-default color" data-color="#cb3594" style="background-color:#cb3594;"></span>
-            <span class="btn btn-default color" data-color="#659b41" style="background-color:#659b41;"></span>
-            <span class="btn btn-default color" data-color="#ffcf33" style="background-color:#ffcf33;"></span>
-            <span class="btn btn-default color" data-color="#986928" style="background-color:#986928;"></span>
-          </li>
-          <li>Taille:
-            <span class="btn btn-default size" data-size="small">Fin</span>
-            <span class="btn btn-default size" data-size="normal">Normal</span>
-            <span class="btn btn-default size" data-size="large">Epais</span>
-            <span class="btn btn-default size" data-size="huge">Gros</span>
-          </li>
-          <li>
-            <span class="highlight">Outils: </span>
-            <!--<span class="btn btn-default tool" data-tool="crayon">Crayon</span>-->
-            <span class="btn btn-default tool" data-tool="marker">Marker</span>
-            <span class="btn btn-default tool" data-tool="eraser">Eraser</span>
-          </li>
-        </ul>
-
+        <div style="background-color: #fff; padding:20px;">
+          <ul>
+            <li>Tout effacer: <button id="clear" class="btn btn-default" onclick="clearCanvas()"></button></li>
+            <li>Couleur:
+              <span class="btn btn-default color" data-color="#cb3594" style="background-color:#cb3594;"></span>
+              <span class="btn btn-default color" data-color="#659b41" style="background-color:#659b41;"></span>
+              <span class="btn btn-default color" data-color="#ffcf33" style="background-color:#ffcf33;"></span>
+              <span class="btn btn-default color" data-color="#986928" style="background-color:#986928;"></span>
+            </li>
+            <li>Taille:
+              <span class="btn btn-default size" data-size="small">Fin</span>
+              <span class="btn btn-default size" data-size="normal">Normal</span>
+              <span class="btn btn-default size" data-size="large">Epais</span>
+              <span class="btn btn-default size" data-size="huge">Gros</span>
+            </li>
+            <li>
+              <span class="highlight">Outils: </span>
+              <!--<span class="btn btn-default tool" data-tool="crayon">Crayon</span>-->
+              <span class="btn btn-default tool" data-tool="marker">Marker</span>
+              <span class="btn btn-default tool" data-tool="eraser">Eraser</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <script src="second.js"></script>
 
-
 </body>
-
-
 </html>
