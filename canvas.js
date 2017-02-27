@@ -104,13 +104,14 @@ function addClick(x, y, dragging) {
 */
 function clearCanvas() {
   context.clearRect(0, 0, canvasWidth, canvasHeight);
+  this.clickX = new Array();
+  this.clickY = new Array();
+  this.clickDrag = new Array();
 }
 
 
 
 function redraw() {
-
-  clearCanvas();
 
   context.lineJoin = "round";
 
