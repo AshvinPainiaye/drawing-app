@@ -44,16 +44,16 @@ crayonTextureImage.src = "images/crayon-texture.png";
 
 
 ipcRenderer.on('color', (event, color) => {
-    curColor = color;
+  curColor = color;
 });
 
 ipcRenderer.on('size', (event, size) => {
-    curSize = size;
+  curSize = size;
 });
 
 
 ipcRenderer.on('tool', (event, tool) => {
-    curTool = tool;
+  curTool = tool;
 });
 
 
@@ -107,6 +107,12 @@ function clearCanvas() {
   this.clickX = new Array();
   this.clickY = new Array();
   this.clickDrag = new Array();
+  this.curColor = "#000";
+  this.clickColor = new Array();
+  this.clickSize = new Array();
+  this.curSize = "small";
+  this.clickTool = new Array();
+  this.curTool = "marker";
 }
 
 
