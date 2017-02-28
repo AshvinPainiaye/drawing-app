@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="lib/css/bootstrap.min.css">
   <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="lib/css/jquery-ui.css" />
+  <link rel="icon" href="images/logo/favicon.ico" />
+
 </head>
 
 <body>
@@ -15,18 +16,15 @@
     <div class="row">
       <div class="col-md-12">
 
-        <h1 class="text-center" style="margin-bottom:40px;">DRAWING APP</h1>
+        <h1 class="text-center" style="margin-bottom:40px;">Drawing App</h1>
 
-        <canvas id="canvas" class="center-block" width="490" height="220"></canvas>
+        <canvas id="canvas" class="center-block" width="490" height="490"></canvas>
 
         <div class="text-center" style="margin-top:30px;">
-          <a class="btn btn-default" href="#" role="button" onclick="show()">Outils</a>
-          <a class="btn btn-default" href="#"
-            role="button" onclick="clearCanvas()">Effacer</a>
+          <a class="btn-style btn btn-default" href="#" role="button" onclick="show()"><i class="fa fa-cog" aria-hidden="true"></i> Outils</a>
+          <a class="btn-style btn btn-default" href="#" role="button" onclick="clearCanvas()"><i class="fa fa-times" aria-hidden="true"></i> Effacer</a>
+          <a id="downloadLnk" class="btn-style btn btn-default" download="drawing-app.jpg"><i class="fa fa-download" aria-hidden="true"></i> Enregistrer</a>
         </div>
-        <!--<ul>
-        <li>Clear the canvas: <span id="clear" class="btn btn-default" onclick="clearCanvas()">Clear</span></li>
-      </ul>-->
       </div>
     </div>
   </div>

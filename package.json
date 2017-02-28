@@ -1,5 +1,13 @@
 {
+  "name": "drawing-app",
+  "version": "1.0.0",
   "main": "main.js",
+  "description": "Dessiner simplement et enregistrer votre dessin.",
+  "author": "Ashvin Painiaye <contact@ashvinpainiaye.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshvinPainiaye/drawing-app"
+  },
   "scripts": {
     "start": "electron ."
   },

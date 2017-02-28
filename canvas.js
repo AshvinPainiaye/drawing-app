@@ -2,17 +2,14 @@ const {ipcRenderer} = require('electron');
 const $ = require('jquery');
 
 context = document.getElementById('canvas').getContext("2d");
-
+context.fillStyle = "white";
+context.fillRect(0, 0, canvas.width, canvas.height);
 var canvasWidth = 490;
-var canvasHeight = 220;
+var canvasHeight = 490;
 var clickX = new Array();
 var clickY = new Array();
 var clickDrag = new Array();
 var paint;
-var colorPurple = "#cb3594";
-var colorGreen = "#659b41";
-var colorYellow = "#ffcf33";
-var colorBrown = "#986928";
 var curColor = "#000";
 var clickColor = new Array();
 var clickSize = new Array();
@@ -104,15 +101,19 @@ function addClick(x, y, dragging) {
 */
 function clearCanvas() {
   context.clearRect(0, 0, canvasWidth, canvasHeight);
+  context.fillStyle = "white";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  ipcRenderer.send('clear', 'clear');
+
   this.clickX = new Array();
   this.clickY = new Array();
   this.clickDrag = new Array();
-  this.curColor = "#000";
   this.clickColor = new Array();
   this.clickSize = new Array();
   this.curSize = "small";
   this.clickTool = new Array();
   this.curTool = "marker";
+
 }
 
 
@@ -157,7 +158,10 @@ function redraw() {
 
   }
 
-
-
-
 }
+
+function download() {
+  var dt = canvas.toDataURL('image/jpg');
+  this.href = dt;
+};
+downloadLnk.addEventListener('click', download, false);
