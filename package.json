@@ -1,6 +1,6 @@
 {
   "name": "drawing-app",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "main.js",
   "description": "Dessiner simplement et enregistrer votre dessin.",
   "author": "Ashvin Painiaye <contact@ashvinpainiaye.com>",
@@ -14,12 +14,5 @@
   "dependencies": {
     "electron": "^1.4.15",
     "jquery": "^3.1.1"
-  },
-  "devDependencies": {
-    "jasmine": "^2.5.3",
-    "jasmine-core": "^2.5.2",
-    "karma": "^1.4.1",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-jasmine": "^1.1.0"
   }
 }

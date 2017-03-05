@@ -9,7 +9,7 @@ let mainWindow
 let secondWindow
 
 function createWindow() {
-    mainWindow = new BrowserWindow({ width: 800, height: 600, icon: __dirname + '/favicon.ico' })
+    mainWindow = new BrowserWindow({ width: 1200, height: 800, icon: __dirname + '/favicon.ico' })
 
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'mainWindow.html'),
@@ -20,11 +20,12 @@ function createWindow() {
     //mainWindow.webContents.openDevTools()
 
     mainWindow.on('closed', function () {
+        secondWindow.hide();
         mainWindow = null
     })
 
     secondWindow = new BrowserWindow({
-        width: 500,
+        width: 400,
         height: 500,
         show: false,
         icon: __dirname + '/favicon.ico'
