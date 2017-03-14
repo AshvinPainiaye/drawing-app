@@ -9,7 +9,7 @@ body{
   
 }
 #canvas{
-  cursor:pointer;
+  cursor:crosshair
 }
 
 h1{
@@ -44,4 +44,9 @@ ul li{
   border:none;
   border-radius: 0;
   color: #fff;
+}
+
+.slider-handle{
+  background-color: rgb(231,231,231) !important;
+  border-color: rgb(231,231,231) !important;
 }

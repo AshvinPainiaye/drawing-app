@@ -1,4 +1,4 @@
-const {ipcRenderer} = require('electron');
+const { ipcRenderer } = require('electron');
 const $ = require('jquery');
 
 var curColor;
@@ -12,13 +12,6 @@ $(".color").click(function () {
   ipcRenderer.send('color', curColor);
 });
 
-$(".size").click(function () {
-  $(".size").removeClass('btn-active');
-  $(this).addClass('btn-active');
-  curSize = $(this).attr('data-size');
-  ipcRenderer.send('size', curSize);
-});
-
 $(".tool").click(function () {
   $(".tool").removeClass('btn-active');
   $(this).addClass('btn-active');
@@ -28,8 +21,8 @@ $(".tool").click(function () {
 
 
 ipcRenderer.on('clear', (event, clear) => {
-  $(".size, .tool").removeClass('btn-active');
-  $("#small, #marker").addClass('btn-active');
+  $(".tool").removeClass('btn-active');
+  $("#marker").addClass('btn-active');
 });
 
 
@@ -39,3 +32,14 @@ function rgbToHex(r, g, b) {
     (0x100 | Math.round(b)).toString(16).substr(1);
   return '#' + hex.toUpperCase();
 }
+
+
+// Largeur du pinceau :
+
+$('#ex1').slider();
+
+$("#largeursPinceau input").change(function () {
+  var px = $(this).val();
+  $("#px").html($(this).val() + "px");
+  ipcRenderer.send('size', px);
+});

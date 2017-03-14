@@ -1,4 +1,4 @@
-const {ipcRenderer} = require('electron');
+const { ipcRenderer } = require('electron');
 const $ = require('jquery');
 
 context = document.getElementById('canvas').getContext("2d");
@@ -13,7 +13,7 @@ var paint;
 var curColor = "#000";
 var clickColor = new Array();
 var clickSize = new Array();
-var curSize = "small";
+var curSize = 5;
 var clickTool = new Array();
 var curTool = "marker";
 var radius;
@@ -59,14 +59,16 @@ $('#canvas').mousedown(function (e) {
   var mouseY = e.pageY - this.offsetTop;
 
   paint = true;
-  addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+  addClick(mouseX, mouseY);
   redraw();
 });
 
 
 $('#canvas').mousemove(function (e) {
   if (paint) {
-    addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
+    var mouseX = e.pageX - this.offsetLeft;
+    var mouseY = e.pageY - this.offsetTop;
+    addClick(mouseX, mouseY, true);
     redraw();
   }
 });
@@ -79,6 +81,38 @@ $('#canvas').mouseup(function (e) {
 $('#canvas').mouseleave(function (e) {
   paint = false;
 });
+
+
+// DEBUT TACTILE
+$(canvas).bind('touchstart', function (e) {
+  var ev = e.originalEvent;
+  e.preventDefault();
+  mouseX = (ev.targetTouches[0].pageX - this.offsetLeft);
+  mouseY = (ev.targetTouches[0].pageY - this.offsetTop);
+
+  paint = true;
+  addClick(mouseX, mouseY);
+  redraw();
+});
+
+
+$(canvas).bind('touchmove', function (e) {
+  if (paint) {
+    var ev = e.originalEvent;
+    e.preventDefault();
+    mouseX = (ev.targetTouches[0].pageX - this.offsetLeft);
+    mouseY = (ev.targetTouches[0].pageY - this.offsetTop);
+
+    addClick(mouseX, mouseY, true);
+    redraw();
+  }
+});
+
+
+$('#canvas').bind('touchend', function (e) {
+  paint = false;
+});
+// FIN TACTILE
 
 
 
@@ -110,7 +144,6 @@ function clearCanvas() {
   this.clickDrag = new Array();
   this.clickColor = new Array();
   this.clickSize = new Array();
-  this.curSize = "small";
   this.clickTool = new Array();
   this.curTool = "marker";
 
@@ -124,19 +157,6 @@ function redraw() {
 
   for (var i = 0; i < clickX.length; i++) {
 
-    if (clickSize[i] == "small") {
-      radius = 2;
-    } else if (clickSize[i] == "normal") {
-      radius = 5;
-    } else if (clickSize[i] == "large") {
-      radius = 10;
-    } else if (clickSize[i] == "huge") {
-      radius = 20;
-    } else {
-      alert("Error: Radius is zero for click " + i);
-      radius = 0;
-    }
-
     context.beginPath();
     if (clickDrag[i] && i) {
       context.moveTo(clickX[i - 1], clickY[i - 1]);
@@ -147,7 +167,7 @@ function redraw() {
     context.lineTo(clickX[i], clickY[i]);
     context.closePath();
     context.strokeStyle = clickColor[i];
-    context.lineWidth = radius;
+    context.lineWidth = clickSize[i];
     context.stroke();
 
     if (curTool == "crayon") {
