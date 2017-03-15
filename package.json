@@ -1,6 +1,6 @@
 {
   "name": "drawing-app",
-  "version": "2.1.0",
+  "version": "2.9.7",
   "main": "main.js",
   "description": "Dessiner simplement et enregistrer votre dessin.",
   "author": "Ashvin Painiaye <contact@ashvinpainiaye.com>",

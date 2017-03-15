@@ -154,12 +154,12 @@
 .slider-track {
   position: absolute;
   cursor: pointer;
-background-color: rgb(0,100,182);
+background-color: rgb(231,231,231);
   border-radius: 4px;
 }
 .slider-selection {
   position: absolute;
-background-color: rgb(0,100,182);
+background-color: rgb(231,231,231);
   border-radius: 4px;
 }
 .slider-selection.tick-slider-selection {
@@ -183,8 +183,8 @@ background-color: rgb(0,100,182);
   top: 0;
   width: 20px;
   height: 20px;
-  background-color: rgb(231,231,231);
-  border: 2px solid rgb(0,100,182) !important;
+  background-color: rgb(0,100,182) !important;
+  border: 2px solid rgb(231,231,231) !important;
 }
 .slider-handle.round {
   border-radius: 50%;

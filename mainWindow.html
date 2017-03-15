@@ -11,22 +11,48 @@
   <link href="style.css" rel="stylesheet" />
   <link rel="icon" href="images/logo/favicon.ico" />
 
+  <link href="lib/slider/css/bootstrap-slider.css" rel="stylesheet" />
+  <script src="lib/jscolor/jscolor.js"></script>
+
 </head>
 
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
 
-        <h1 class="text-center" style="margin-bottom:40px;">Drawing App</h1>
+      <div class="col-md-12" style="padding-left:0; padding-right:0">
+
+        <h1 class="text-center" style="margin:0px auto;">Drawing App</h1>
+
+        <div class="outils">
+          <ul class="list-inline text-center">
+            <li>
+              <button id="foo" class="color jscolor {valueElement:null,value:'000000'}" style="width:70px; height:30px; border:1px solid #fff;"></button>
+            </li>
+            <li>
+              <form id="largeursPinceau">
+                <label for="largeur_pinceau"><span class="epaisseur">Size</span> :  <span id="px">5px</span></label>
+                <br>
+                <input id="ex1" data-slider-id="ex1Slider" type="text" data-slider-min="2" data-slider-max="50" data-slider-step="1" data-slider-value="5"
+                  data-slider-tooltip="hide" />
+                <br/>
+              </form>
+            </li>
+            <li>
+              <span id="marker" class="btn btn-default tool btn-active btn-outils" data-tool="marker" title="Marqueur"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+              <span class="btn btn-default tool btn-outils" data-tool="eraser" title="Gomme"><i class="fa fa-eraser" aria-hidden="true"></i></span>
+            </li>
+          </ul>
+        </div>
 
         <canvas id="canvas" class="center-block" width="490" height="490"></canvas>
 
         <div class="text-center" style="margin-top:30px;">
-          <a class="btn-style btn btn-default" href="#" role="button" onclick="show()"><i class="fa fa-cog" aria-hidden="true"></i> Outils</a>
-          <a class="btn-style btn btn-default" href="#" role="button" onclick="clearCanvas()"><i class="fa fa-times" aria-hidden="true"></i> Effacer</a>
-          <a id="downloadLnk" class="btn-style btn btn-default" download="drawing-app.jpg"><i class="fa fa-download" aria-hidden="true"></i> Enregistrer</a>
+          <!--<a class="btn-style btn btn-default" href="#" role="button" onclick="show()"><i class="fa fa-cog" aria-hidden="true"></i> Outils</a>-->
+          <a class="btn-style btn btn-default clear" href="#" role="button" onclick="clearCanvas()"><i class="fa fa-times" aria-hidden="true"></i> <span class="effacer">Clear</span></a>
+          <a id="downloadLnk" class="btn-style btn btn-default" download="drawing-app.jpg"><i class="fa fa-download" aria-hidden="true"></i> <span class="enregistrer">Save</span></a>
         </div>
+
       </div>
     </div>
   </div>
@@ -42,7 +68,9 @@
   </footer>
 
   <script src="canvas.js"></script>
-
+  <script src="lib/slider/bootstrap-slider.min.js"></script>
+  <script src="language.js"></script>
+  <script src="outils.js"></script>
 </body>
 
 </html>

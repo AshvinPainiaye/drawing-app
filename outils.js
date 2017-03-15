@@ -1,14 +1,9 @@
-const { ipcRenderer } = require('electron');
-const $ = require('jquery');
-
-var curColor;
-
 $(".color").click(function () {
   var color = $(this).css('backgroundColor');
   var sub = color.replace("rgb(", "");
   var sub2 = sub.replace(")", "");
   var rgb = sub2.split(', ');
-  curColor = rgbToHex(rgb[0], rgb[1], rgb[2]);
+  var curColor = rgbToHex(rgb[0], rgb[1], rgb[2]);
   ipcRenderer.send('color', curColor);
 });
 
@@ -20,7 +15,7 @@ $(".tool").click(function () {
 });
 
 
-ipcRenderer.on('clear', (event, clear) => {
+$('.clear').click(function () {
   $(".tool").removeClass('btn-active');
   $("#marker").addClass('btn-active');
 });
@@ -35,7 +30,6 @@ function rgbToHex(r, g, b) {
 
 
 // Largeur du pinceau :
-
 $('#ex1').slider();
 
 $("#largeursPinceau input").change(function () {
